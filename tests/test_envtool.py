@@ -1,13 +1,11 @@
-from future import standard_library
-standard_library.install_aliases()
-
 import os.path
-import unittest
-from sys import version_info
+# from sys import version_info
 # if version_info[0] == 2:
 #     from mock import patch, mock_open, call
 # else:
 #     from unittest.mock import patch, mock_open, call
+
+from pytest import fail
 
 import envtool
 
@@ -16,25 +14,28 @@ def _fixture(name):
     return os.path.join(os.path.dirname(__file__), 'fixtures', name)
 
 
-class MainTestCase(unittest.TestCase):
-    def test_parse_envfile_contents(self):
-        self.assertEqual(envtool.parse_envfile_contents("""
+def test_envfile_to_dict():
+    assert envtool.envfile_to_dict(_fixture('basic_envfile')) == {'A': 'abcde', 'B': 'def'}
+
+def test_parse_envfile_contents():
+    assert envtool.parse_envfile_contents("""
         # Comment
         a=b
-        """), {'a': 'b'})
+        """) == {'a': 'b'}
 
-    def test_parse_invalid_envfile_contents(self):
-        self.assertRaises(
-            IOError,
-            lambda: envtool.parse_envfile_contents("""
+def test_parse_invalid_envfile_contents():
+    try:
+        envtool.parse_envfile_contents("""
 a
-            """)
-        )
+        """)
+        fail()
+    except IOError:
+        assert True
 
-    def test_envdir_to_dict(self, ):
-        res = envtool.envdir_to_dict(_fixture('basic_envdir'))
-        self.assertEqual(res, {'A': 'abcde', 'B': 'def'})
+def test_envdir_to_dict():
+    res = envtool.envdir_to_dict(_fixture('basic_envdir'))
+    assert res == {'A': 'abcde', 'B': 'def'}
 
 
 if __name__ == '__main__':
-    unittest.main()
+    pytest.main()

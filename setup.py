@@ -7,8 +7,27 @@ from os.path import dirname
 from os.path import join
 from os.path import splitext
 
-from setuptools import find_packages
-from setuptools import setup
+from setuptools import setup, find_packages
+from setuptools.command.test import test as TestCommand
+
+
+class PyTest(TestCommand):
+    user_options = []
+
+    def initialize_options(self):
+        TestCommand.initialize_options(self)
+        self.pytest_args = []
+
+    def finalize_options(self):
+        TestCommand.finalize_options(self)
+        self.test_args = []
+        self.test_suite = True
+
+    def run_tests(self):
+        #import here, cause outside the eggs aren't loaded
+        import pytest
+        errno = pytest.main(self.pytest_args)
+        sys.exit(errno)
 
 
 def read(*names, **kwargs):
@@ -40,7 +59,7 @@ setup(
         "Operating System :: POSIX",
         # "Operating System :: Microsoft :: Windows",
         "Environment :: Console",
-        "Intended Audience :: System Administrator",
+        # "Intended Audience :: System Administrator",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
@@ -52,7 +71,7 @@ setup(
         "Topic :: Utilities",
     ],
     keywords=[
-        "environment", "envdir", "honcho", "foreman", "env"
+        "environment", "envdir", "honcho", "foreman", "env",
     ],
     install_requires=[
         "future>=0.15.0",
@@ -63,9 +82,12 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "envtool=envtool:main"
+            "envtool=envtool:main",
         ]
     },
 
-    test_suite="tests.test_envtool",
+    cmdclass = {'test': PyTest},
+    tests_require=[
+        "pytest>=2.7.2",
+    ]
 )
