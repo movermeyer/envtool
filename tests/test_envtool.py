@@ -36,6 +36,5 @@ def test_envdir_to_dict():
     res = envtool.envdir_to_dict(_fixture('basic_envdir'))
     assert res == {'A': 'abcde', 'B': 'def'}
 
-
 if __name__ == '__main__':
     pytest.main()
