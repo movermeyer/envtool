@@ -33,12 +33,14 @@ setup(
     zip_safe=False,
     classifiers=[
         # complete classifier list: http://pypi.python.org/pypi?%3Aaction=list_classifiers
-        "Development Status :: 5 - Production/Stable",
+        "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: BSD License",
         "Operating System :: Unix",
         "Operating System :: POSIX",
-        "Operating System :: Microsoft :: Windows",
+        # "Operating System :: Microsoft :: Windows",
+        "Environment :: Console",
+        "Intended Audience :: System Administrator",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
@@ -50,18 +52,19 @@ setup(
         "Topic :: Utilities",
     ],
     keywords=[
-        # eg: "keyword1", "keyword2", "keyword3",
+        "environment", "envdir", "honcho", "foreman", "env"
     ],
     install_requires=[
-        # eg: "aspectlib==1.1.1", "six>=1.7",
+        "click>=4.0.0",
     ],
     extras_require={
         # eg: 'rst': ["docutils>=0.11"],
     },
     entry_points={
         "console_scripts": [
-            "envtool = envtool.__main__:main"
+            "envtool=envtool:main"
         ]
-    }
+    },
 
+    test_suite="tests.test_envtool",
 )

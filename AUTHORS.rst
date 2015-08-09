@@ -2,4 +2,4 @@
 Authors
 =======
 
-* Mark Smith - http://www.judy.co.uk/
+* Mark Smith (judy2k)

@@ -9,7 +9,7 @@ envtool
     :target: https://readthedocs.org/projects/envtool
     :alt: Documentation Status
 
-.. |travis| image:: http://img.shields.io/travis/judy2k/envtool/master.png?style=flat
+.. |travis| image:: http://img.shields.io/travis/judy2k/envtool/master.svg?style=flat
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/judy2k/envtool
 
@@ -17,7 +17,7 @@ envtool
     :alt: AppVeyor Build Status
     :target: https://ci.appveyor.com/project/judy2k/envtool
 
-.. |coveralls| image:: http://img.shields.io/coveralls/judy2k/envtool/master.png?style=flat
+.. |coveralls| image:: http://img.shields.io/coveralls/judy2k/envtool/master.svg?style=flat
     :alt: Coverage Status
     :target: https://coveralls.io/r/judy2k/envtool
 
@@ -25,11 +25,11 @@ envtool
     :target: https://landscape.io/github/judy2k/envtool/master
     :alt: Code Quality Status
 
-.. |version| image:: http://img.shields.io/pypi/v/envtool.png?style=flat
+.. |version| image:: http://img.shields.io/pypi/v/envtool.svg?style=flat
     :alt: PyPI Package latest release
     :target: https://pypi.python.org/pypi/envtool
 
-.. |downloads| image:: http://img.shields.io/pypi/dm/envtool.png?style=flat
+.. |downloads| image:: http://img.shields.io/pypi/dm/envtool.svg?style=flat
     :alt: PyPI Package monthly downloads
     :target: https://pypi.python.org/pypi/envtool
 
@@ -45,7 +45,7 @@ envtool
     :alt: Supported imlementations
     :target: https://pypi.python.org/pypi/envtool
 
-.. |scrutinizer| image:: https://img.shields.io/scrutinizer/g/judy2k/envtool/master.png?style=flat
+.. |scrutinizer| image:: https://img.shields.io/scrutinizer/g/judy2k/envtool/master.svg?style=flat
     :alt: Scrtinizer Status
     :target: https://scrutinizer-ci.com/g/judy2k/envtool/
 
