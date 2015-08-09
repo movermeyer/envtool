@@ -8,12 +8,12 @@ from os.path import join
 from os.path import splitext
 import sys
 
-from setuptools import setup, find_packages
+from setuptools import setup
 from setuptools.command.test import test as TestCommand
 
 
 class PyTest(TestCommand):
-    user_options = []
+    user_options = [('pytest-args=', 'a', "Arguments to pass to py.test")]
 
     def initialize_options(self):
         TestCommand.initialize_options(self)
@@ -25,7 +25,7 @@ class PyTest(TestCommand):
         self.test_suite = True
 
     def run_tests(self):
-        #import here, cause outside the eggs aren't loaded
+        # import here, cause outside the eggs aren't loaded
         import pytest
         errno = pytest.main(self.pytest_args)
         sys.exit(errno)
@@ -85,7 +85,7 @@ setup(
         ]
     },
 
-    cmdclass = {'test': PyTest},
+    cmdclass={'test': PyTest},
     tests_require=[
         "pytest>=2.7.2",
     ]
