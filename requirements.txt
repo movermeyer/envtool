@@ -1,4 +1,5 @@
 # Development dependencies.
+-e .    # Install this library and deps
 flake8
 mock
 wheel

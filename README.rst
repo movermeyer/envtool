@@ -19,7 +19,7 @@ envtool
 
 .. |coveralls| image:: http://img.shields.io/coveralls/judy2k/envtool/master.svg?style=flat
     :alt: Coverage Status
-    :target: https://coveralls.io/r/judy2k/envtool
+    :target: https://coveralls.io/github/judy2k/envtool
 
 .. |landscape| image:: https://landscape.io/github/judy2k/envtool/master/landscape.svg?style=flat
     :target: https://landscape.io/github/judy2k/envtool/master
