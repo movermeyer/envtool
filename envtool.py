@@ -7,6 +7,7 @@ import os.path
 
 import click
 
+version = __version__ = '0.0.0'
 
 def envdir_to_dict(d):
     result = {}

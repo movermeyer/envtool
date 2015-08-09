@@ -6,6 +6,7 @@ from os.path import basename
 from os.path import dirname
 from os.path import join
 from os.path import splitext
+import sys
 
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
@@ -45,9 +46,7 @@ setup(
     author="Mark Smith",
     author_email="mark.smith@practicalpoetry.co.uk",
     url="https://github.com/judy2k/envtool",
-    packages=find_packages("src"),
-    package_dir={"": "src"},
-    py_modules=[splitext(basename(i))[0] for i in glob.glob("src/*.py")],
+    py_modules=[splitext(basename(i))[0] for i in glob.glob("*.py")],
     include_package_data=True,
     zip_safe=False,
     classifiers=[

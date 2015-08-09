@@ -1,9 +1,9 @@
 [paths]
-source = src
+source = .
 
 [run]
 branch = True
-source = src
+source = .
 parallel = true
 
 [report]
