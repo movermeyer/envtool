@@ -68,6 +68,7 @@ def convert_to_envdir(src, dest):
 
 
 @click.group()
+@click.version_option()
 def main():
     pass
 
