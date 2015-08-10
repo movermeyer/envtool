@@ -39,7 +39,7 @@ def read(*names, **kwargs):
 
 setup(
     name="envtool",
-    version="0.0.0",
+    version="0.1.0",
     license="BSD",
     description="A tool for managing envdirs and env files.",
     long_description="%s\n%s" % (read("README.rst"), re.sub(":obj:`~?(.*?)`", r"``\1``", read("CHANGELOG.rst"))),
