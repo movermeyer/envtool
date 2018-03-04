@@ -33,15 +33,15 @@ envtool
     :alt: PyPI Package monthly downloads
     :target: https://pypi.python.org/pypi/envtool
 
-.. |wheel| image:: https://pypip.in/wheel/envtool/badge.png?style=flat
+.. |wheel| image:: https://img.shields.io/pypi/wheel/envtool.svg?style=flat
     :alt: PyPI Wheel
     :target: https://pypi.python.org/pypi/envtool
 
-.. |supported-versions| image:: https://pypip.in/py_versions/envtool/badge.png?style=flat
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/envtool.svg?style=flat
     :alt: Supported versions
     :target: https://pypi.python.org/pypi/envtool
 
-.. |supported-implementations| image:: https://pypip.in/implementation/envtool/badge.png?style=flat
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/envtool.svg?style=flat
     :alt: Supported imlementations
     :target: https://pypi.python.org/pypi/envtool
 
